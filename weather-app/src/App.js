@@ -135,30 +135,32 @@ const App = () => {
                 <img src={search} alt="" />
               </button>
             </form>
-            <div className={styles.regions}>
-              {regions.map((item, index) => (
-                <h5 key={index} onClick={() => handleClick(item)}>
-                  {item?.title}
-                </h5>
-              ))}
-            </div>
-            <div className={styles.deatails}>
-              <h1>Weather Deatails</h1>
-              <div className={styles.row}>
-                <span>Pressure</span>
-                <span>{weather?.main.pressure}</span>
+            <div className={styles.wrapperMobile}>
+              <div className={styles.regions}>
+                {regions.map((item, index) => (
+                  <h5 key={index} onClick={() => handleClick(item)}>
+                    {item?.title}
+                  </h5>
+                ))}
               </div>
-              <div className={styles.row}>
-                <span>Humidity</span>
-                <span>{weather?.main.humidity}%</span>
-              </div>
-              <div className={styles.row}>
-                <span>Coord</span>
-                <span>{weather?.coord.lat}</span>
-              </div>
-              <div className={styles.row}>
-                <span>Description</span>
-                <span>{weather?.weather[0].description}</span>
+              <div className={styles.deatails}>
+                <h1>Weather Deatails</h1>
+                <div className={styles.row}>
+                  <span>Pressure</span>
+                  <span>{weather?.main.pressure}</span>
+                </div>
+                <div className={styles.row}>
+                  <span>Humidity</span>
+                  <span>{weather?.main.humidity}%</span>
+                </div>
+                <div className={styles.row}>
+                  <span>Coord</span>
+                  <span>{weather?.coord.lat}</span>
+                </div>
+                <div className={styles.row}>
+                  <span>Description</span>
+                  <span>{weather?.weather[0].description}</span>
+                </div>
               </div>
             </div>
           </div>
