@@ -108,7 +108,8 @@ const App = () => {
             <div className={styles.logo}>the.weather</div>
             <div className={styles.title}>
               <h1>
-                {Math.ceil(Number(weather?.main.temp))} <span>°</span>
+                {Math.floor(weather?.main.temp - 273.15)}
+                <span>°</span>
               </h1>
 
               <div>
